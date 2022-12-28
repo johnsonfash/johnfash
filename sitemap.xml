@@ -8,5 +8,9 @@
     		<loc>https://johnfash.com/sitemap-post.xml</loc>
     		<lastmod>2022-03-31</lastmod>
     	</sitemap>
+			   	<sitemap>
+    		<loc>https://johnfash.com/sitemap-project.xml</loc>
+    		<lastmod>2022-03-31</lastmod>
+    	</sitemap>
     </sitemapindex>
     
