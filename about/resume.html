@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JohnFash - About</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://johnfash.com/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://johnfash.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://johnfash.com/favicon-16x16.png">
+  <link rel="icon" href="https://johnfash.com/favicon-16x16.ico" sizes="16x16" />
+  <link rel="icon" href="https://johnfash.com/favicon-32x32.ico" sizes="32x32" />
+  <link rel="icon" href="https://johnfash.com/favicon-48x48.ico" sizes="48x48" />
+  <link rel="icon" href="https://johnfash.com/favicon-197x197.ico" sizes="197x197" />
+  <link rel="manifest" href="https://johnfash.com/site.webmanifest">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215053336-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-215053336-1');
+  </script>
+  <!-- <link rel="stylesheet" href="main.css"> -->
+  <link rel="stylesheet" href="https://johnfash.com/about/main.css">
+  <!-- <link rel="stylesheet" href="https://johnfash.com/about/main.css"> -->
+  <meta name="description" content="We're an independent web and mobile application development agency located in Lagos, Lekki. We’re developed custom web and mobile solutions for quite a plethora of our clients. Our portfolio have boasted over 100 completed projects and applications, and we will be glad to share some o these as a reference if you choose one of our services today. Chat with us today and lets bring your idea/project live for all to see!" />
+  <meta name="Keywords" content="We're an independent web and mobile application development agency located in Lagos, Lekki. We’re developed custom web and mobile solutions for quite a plethora of our clients. Our portfolio have boasted over 100 completed projects and applications, and we will be glad to share some o these as a reference if you choose one of our services today. Chat with us today and lets bring your idea/project live for all to see!">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="JohnFash - about me | Fashanu Tosin" />
+  <meta property="og:description" content="We're an independent web and mobile application development agency located in Lagos, Lekki. We’re developed custom web and mobile solutions for quite a plethora of our clients. Our portfolio have boasted over 100 completed projects and applications, and we will be glad to share some o these as a reference if you choose one of our services today. Chat with us today and lets bring your idea/project live for all to see!" />
+  <meta property="article:publisher" content="https://www.facebook.com/WebDevs7" />
+  <meta property="og:image" content="https://johnfash.com/asset/web-devs-logo.png" />
+  <meta name="twitter:data1" content="Johnson Fashanu">
+</head>
+
+<body>
+  <input type="checkbox" name="" value="" id="hamburger">
+  <header>
+    <div class="header">JOHNSON FASHANU</div>
+    <label for="hamburger" class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+  <nav>
+    <div class="nav-flex">
+      <div class="top-nav">
+        <img src="https://johnfash.com/asset/profile.png" alt="" id="profile-image">
+        <div class="image-detail">
+          <h4>John Fash.</h4>
+          <p>Lagos, NG</p>
+        </div>
+        <hr />
+        <div class="links">
+          <a href="https://johnfash.com/" class="home-anchor">
+            <span>Home</span>
+          </a>
+          <a href="https://johnfash.com/about/" class="about-anchor <?php echo $activeAbout; ?>">
+            <span>About</span>
+          </a>
+          <a href="https://johnfash.com/about/resume/" class="resume-anchor <?php echo $activeResume; ?>">
+            <span>Resume</span>
+          </a>
+          <a href="https://johnfash.com/about/portfolio/" class="portfolio-anchor <?php echo $activePortfolio; ?>">
+            <span>Portfolio</span>
+          </a>
+          <a href="https://johnfash.com/about/contact/" class="contact-anchor <?php echo $activeContact; ?>">
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+      <div class="social">
+        <span>
+          <a href="https://web.facebook.com/iamjohnfash"><img src="https://johnfash.com/asset/facebook.png" alt="fb"></a>
+          <a href="https://www.linkedin.com/in/johnfash/"><img src="https://johnfash.com/asset/linkedin.png" alt="in"></a>
+          <a href="https://github.com/johnsonfash"><img src="https://johnfash.com/asset/github.png" alt="git"></a>
+        </span>
+        <div class="copyright">
+          <?= date("Y"); ?> © JohnFash. <br />
+          All Right Reserved.
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="about-me" onclick="hamburger.checked = false;">
+
+      <h1 class="resume-title">EXPERIENCE / EDUCATION</h1>
+      <div id="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+          </div>
+          <div class="timeline-content">
+            <h2>April 2022 - present <span>- Hightable Africa</span></h2>
+            <p>Lead Engineer - Work with the backend team, devops, and management in the development of <em>betascratch</em> platform, among others.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+          </div>
+          <div class="timeline-content right">
+            <h2>March 2020 - 2022 <span>- Diimtech</span></h2>
+            <p>
+              Development of web, mobile and desktop applications for various industries. Among these products are <em>Authenticpass (barcode)</em>, <em>Tradersconnect (e-commerce)</em> etc.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+          </div>
+          <div class="timeline-content">
+            <h2>February 2018 - 2020 <span>- Nantechnologies (contract)</span></h2>
+            <p>
+              Development of scalable web applications for clients.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+          </div>
+          <div class="timeline-content right">
+            <h2>2017 - 2018 <span>- Education/Intern</span></h2>
+            <p>
+              Participated in Google Nano degree program for android app development in partnership with Udacity for a period of 8 months. <br>
+              Also interned (4 months) as a website developer at Delcert technologies.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+          </div>
+          <div class="timeline-content right">
+            <h2>2018 - 2022 <span>- Education</span></h2>
+            <p>
+              Majored in Physics & Electronics at Adekunle Ajasin University
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-flex">
+        <div class="design">
+          <h1 class="resume-title">DESIGN</h1>
+          <p>UI／UX DESIGN</p>
+          <div class="progress-bar">
+            <span class="progress-span ui" style="width: 92%;"></span>
+          </div>
+          <p>GIMP</p>
+          <div class="progress-bar">
+            <span class="progress-span gimp" style="width: 70%;"></span>
+          </div>
+          <p>HTML5</p>
+          <div class="progress-bar">
+            <span class="progress-span html" style="width: 98%;"></span>
+          </div>
+          <p>CSS3</p>
+          <div class="progress-bar">
+            <span class="progress-span wire-f" style="width: 95%;"></span>
+          </div>
+          <p>WORDPRESS</p>
+          <div class="progress-bar">
+            <span class="progress-span wire-f" style="width: 80%;"></span>
+          </div>
+        </div>
+        <div class="coding">
+          <h1 class="resume-title">CODING</h1>
+          <p>REACT.js</p>
+          <div class="progress-bar">
+            <span class="progress-span react" style="width: 96%;"></span>
+          </div>
+          <p>VUE.js</p>
+          <div class="progress-bar">
+            <span class="progress-span vue" style="width: 89%;"></span>
+          </div>
+          <p>NODE.js</p>
+          <div class="progress-bar">
+            <span class="progress-span node" style="width: 97%;"></span>
+          </div>
+          <p>JAVASCRIPT</p>
+          <div class="progress-bar">
+            <span class="progress-span javascript" style="width: 99%;"></span>
+          </div>
+          <p>LARAVEL</p>
+          <div class="progress-bar">
+            <span class="progress-span laravel" style="width: 92%;"></span>
+          </div>
+          <p>MYSQL</p>
+          <div class="progress-bar">
+            <span class="progress-span mysql" style="width: 93%;"></span>
+          </div>
+          <p>PHP</p>
+          <div class="progress-bar">
+            <span class="progress-span php" style="width: 96%;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | JohnFash</title>
+  <meta name="description" content="A Web development firm/agency and tutorials website by John Fash. Hire a team of developers today to build your custom web and mobile applications, and also accessing many tools & plugin for Beginners in html, css, JavaScript, php, vue, laravel, nodejs and many more." />
+  <meta name="Keywords" content="Web development,tutorials,hire, developer, agency, mobile, website , development agency,web developer,hire a web developer, HTML,CSS, John Fash,JavaScript,SQL,PHP,DOM, web design,programming,learning,examples,source code,tips,web" />
+  <meta property="og:locale" content="en_US" />
+  <link rel="icon" href="https://johnfash.com/favicon-16x16.ico" sizes="16x16" />
+  <link rel="icon" href="https://johnfash.com/favicon-32x32.ico" sizes="32x32" />
+  <link rel="icon" href="https://johnfash.com/favicon-48x48.ico" sizes="48x48" />
+  <link rel="icon" href="https://johnfash.com/favicon-197x197.ico" sizes="197x197" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://johnfash.com/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://johnfash.com/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://johnfash.com/favicon-16x16.png" />
+  <link rel="manifest" href="https://johnfash.com/site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio / Webdevelopment tutorials | JohnFash" />
+  <meta property="og:description" itemprop="description" content="A personal portfolio / Web development tutorials website by John Fash where you can find tools, plugin for Beginner in html, css, JavaScript, php, vue, laravel, nodejs and more" />
+  <meta name="twitter:description" property="og:description" itemprop="description" content="A personal portfolio / Web development tutorials website by John Fash where you can find tools, plugin for Beginner in html, css, JavaScript, php, vue, laravel, nodejs and more" />
+  <meta name="twitter:title" property="og:title" itemprop="name" content="Home | JohnFash" />
+  <!-- <meta property="og:image" itemprop="image primaryImageOfPage" content="./asset/aplus.png" /> -->
+  <meta name="twitter:data1" content="John Fash" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215053336-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-215053336-1");
+  </script>
+  <link rel="stylesheet" href="https://johnfash.com/project/index.css" />
+  <style>
+  button.submit {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      cursor: pointer; 
+      padding: 0.5rem;
+      height: 2.5rem;
+  }
+      input, select, textarea {
+          font-family: "Montserrat", sans-serif;
+      }
+ .loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  display:inline-block;
+  border-radius: 50%;
+  margin-left: 1rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+ -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  </style>
+</head>
+
+<body>
+  <main>
+  <div class="logo logoShade" id="logoID">
+        <a href="https://johnfash.com/" class="logoL">
+          <img src="https://johnfash.com/apple-touch-icon.png" alt="" />
+          <div class="logoName">
+            JohnFash<span class="killable"><span class="dot">.</span>com</span>
+          </div>
+        </a>
+        <div class="logoR">
+          <a href="https://johnfash.com/project/authenticpass.html"
+            >Portfolio</a
+          >
+          <a href="https://johnfash.com/project/contact/" class="project"
+            >New Project</a
+          >
+        </div>
+        <div class="hambuger">
+          <input type="checkbox" name="" id="hambuger" />
+          <label for="hambuger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </label>
+          <div class="hiddenLink">
+            <a href="https://johnfash.com/project/authenticpass.html"
+              >Portfolio</a
+            >
+            <a href="https://johnfash.com/about/contact/" class="project"
+              >Project</a
+            >
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+      <div class="contactForm">
+        <form method="post" onsubmit="handleSubmit(event)">
+          <h1 id='response'></h1>
+          <p>Full Name</p>
+          <input type="text" name="name" value="" placeholder="Enter your full name" required>
+          <p>Email</p>
+          <input type="email" name="email" value="" placeholder="Enter your email address" required>
+          <p>Needed Service</p>
+          <select class="" name="service" require>
+            <option value="" selected hidden>Choose Service</option>
+            <option value="web">Web Application</option>
+            <option value="mobile">Mobile Application</option>
+            <option value="desktop">Desktop Application</option>
+            <option value="consultant">Consultant</option>
+            <option value="enquiry">Enquiry</option>
+          </select>
+          <p>Message</p>
+          <textarea require name="message" rows="3" placeholder="Your message here..." required></textarea>
+          <br>
+          <button type="submit" class='submit' name="submit">Submit <span id='spinner' class=''></span> </button>
+        </form>
+      </div>
+
+    </div>
+
+    <section class="fourthPage">
+      <footer>
+        <h2><a href="https://johnfash.com/about/">JOHN FASH</a></h2>
+        <div class="lnkList">
+          <a href="https://johnfash.com/project/authenticpass.html">Portfolio</a>
+          <a href="https://johnfash.com/legal/terms/">Terms of Use</a>
+          <a href="https://johnfash.com/legal/privacy-policy/">Privacy</a>
+        </div>
+        <p>&copy; <span id="dateX"></span> JOHN FASH. ALL RIGHTS RESERVED</p>
+      </footer>
+    </section>
+  </main>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeSLoUiAAAAAAOSi9QLpprHbyLQTtkrrhGVO0o4"></script>
+  <script>
+    function handleSubmit(e) {
+    e.preventDefault();
+    const resElem = document.getElementById('response');
+    const spinner = document.getElementById('spinner');
+    grecaptcha.ready(function() {
+          grecaptcha.execute('6LeSLoUiAAAAAAOSi9QLpprHbyLQTtkrrhGVO0o4', {action: 'contact_form_submit'}).then(function(token) {
+          const form = new FormData();
+          form.append('email', e.target.email.value);
+          form.append('name', e.target.name.value);
+          form.append('service', e.target.service.value);
+          form.append('budget', 'flexible');
+          form.append('message', e.target.message.value);
+          form.append('token', token);
+          form.append('contact_form_submit', 'submit');
+          form.append('message', e.target.message.value);
+          spinner.classList.toggle("loader");
+              fetch('https://johnfash.com/utils/control.php', {
+                  method:'post',
+                  body: form
+              })
+              .then((res)=> res.json())
+              .then((data)=> {
+                  if(data.error){
+                      resElem.textContent = data.errorMessage;
+                  } else {
+                      resElem.textContent = 'Sent ✅'
+                  }
+                  spinner.classList.toggle("loader");
+              })
+              .catch((err)=> {
+                  resElem.textContent = err.message;
+                  spinner.classList.toggle("loader");
+              })
+          })
+     })
+      }
+  </script>
+</body>
+
+</html>
+
+<?php
+$activeContact = 'activeLink';
+$activePortfolio = $activeAbout = $activeResume = '';
+define('includeDash', TRUE);
+?>

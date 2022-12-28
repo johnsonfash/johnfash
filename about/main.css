@@ -1,0 +1,1330 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&family=Playfair+Display&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+}
+* {
+  margin: 0;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Playfair Display", serif;
+}
+:root {
+  --blue: var(--blueColour, rgb(70, 181, 228));
+  --blueHue: var(--blueColour, rgba(70, 181, 228, 0.9));
+  --red: var(--redColor, rgb(180, 6, 34));
+  --black: var(--blackColor, rgb(0, 0, 0));
+  --grey: var(--greyColor, grey);
+  --white: var(--whiteColor, white);
+  --lightgreyFake: var(--lightgreyColorFake, #f9f9f9);
+  --lightgrey: var(--lightgreyColor, lightgrey);
+  --whitesmoke: var(--whitesmokeColor, whitesmoke);
+}
+html {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: grey lightgrey;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb:vertical {
+  background-color: grey;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: lightgrey;
+}
+nav {
+  display: block;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  box-sizing: border-box;
+  padding: 0;
+  transform: translateX(-200px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 10;
+  background: inherit;
+  /*border-right: 1.5px solid #e8e8e8;*/
+  box-shadow: 5px 0px 15px inset rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  transition: 0.3s linear;
+}
+nav .nav-flex {
+  display: flex;
+  height: 100%;
+  overflow-x: hidden;
+  min-width: 200px;
+  max-width: 200px;
+  padding: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+}
+nav .top-nav img#profile-image {
+  display: block;
+  max-width: 40%;
+  margin: 3em auto 0 auto;
+  border-radius: 50%;
+  padding: 0.5em;
+  border: 2px solid rgb(180, 6, 34);
+}
+nav .top-nav .image-detail {
+  text-align: center;
+  margin: 1em 0;
+}
+nav .top-nav hr {
+  width: 150px;
+  margin: 0 auto;
+  border: 1.5px solid #f0f0f0;
+}
+#hamburger {
+  display: none;
+}
+header {
+  position: fixed;
+  width: 100%;
+}
+.hamburger-icon {
+  position: absolute;
+  z-index: 10;
+  top: 6px;
+  right: 15px;
+}
+.hamburger-icon span {
+  height: 3px;
+  width: 25px;
+  background-color: var(--black);
+  display: block;
+  margin: 5px 0px 5px 0px;
+  transition: 0.3s ease-in-out;
+  transform: none;
+}
+#hamburger:checked ~ header .hamburger-icon span:nth-of-type(1) {
+  transform: translate(0%, 245%) rotate(-45deg);
+}
+#hamburger:checked ~ header .hamburger-icon span:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+#hamburger:checked ~ header .hamburger-icon span:nth-of-type(3) {
+  opacity: 0;
+}
+#hamburger:checked ~ nav {
+  width: 200px;
+  transform: translateX(0px);
+}
+header .header {
+  padding: 10px 0;
+  font-size: 18px;
+  background: -webkit-linear-gradient(135deg, lightgrey, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+nav .top-nav .links {
+  padding-top: 1em;
+}
+nav .top-nav .image-detail p {
+  font-size: 0.85em;
+  color: var(--grey);
+}
+nav .links a:nth-of-type(2) img {
+  background: var(--black);
+}
+nav .links a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 0 15px 70px;
+  color: grey;
+  font-size: 1em;
+  align-items: center;
+}
+nav .links a.home-anchor {
+  background: url(https://johnfash.com/asset/home-inner-black.png) 30px
+    no-repeat;
+  background-size: 30px;
+}
+nav .links a.about-anchor {
+  background: url(https://johnfash.com/asset/about-me-inner-black.png) 30px
+    no-repeat;
+  background-size: 30px;
+}
+nav .links a.resume-anchor {
+  background: url(https://johnfash.com/asset/resume-inner-black.png) 30px
+    no-repeat;
+  background-size: 30px;
+}
+nav .links a.portfolio-anchor {
+  background: url(https://johnfash.com/asset/portfolio-inner-black.png) 30px
+    no-repeat;
+  background-size: 30px;
+}
+nav .links a.contact-anchor {
+  background: url(https://johnfash.com/asset/contact-inner-black.png) 30px
+    no-repeat;
+  background-size: 30px;
+}
+
+nav .links .activeLink {
+  border-left: 4px solid rgb(180, 6, 34);
+  color: var(--black);
+  background-position: 28px;
+  padding-left: 68px;
+}
+nav .links a:hover {
+  background-color: var(--whitesmoke);
+  color: black;
+}
+nav .nav-flex .social span {
+  display: flex;
+  margin: 15px 30px;
+  justify-content: space-between;
+}
+nav .nav-flex .social img {
+  width: 25px;
+  border-radius: 5px;
+  background: #e8e8e8;
+  border: 1px solid black;
+}
+nav .nav-flex .social img:hover {
+  background: white;
+  transform: translateY(-1.5px);
+}
+nav .nav-flex .social .copyright {
+  text-align: center;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+}
+section {
+  transition: 0.3s linear;
+  padding: 20px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+section .about-me {
+  max-width: 1020px;
+  margin: 50px auto 0 auto;
+  padding-bottom: 50px;
+}
+
+/* about.php */
+section .about-me .about-me-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+section .about-me .about-me-profile {
+  flex: 1 1 100%;
+}
+section .about-me .about-me-details {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+section .about-me .about-me-profile img {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 10px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+section .about-me-details p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-bottom: 0.7em;
+}
+section .about-me-details .title-p {
+  color: grey;
+  font-size: 1em;
+  margin: 1em 0 0.5em 0;
+  font-family: Verdana;
+  text-align: center;
+}
+section .about-me-details .name-h1 {
+  color: black;
+  margin-bottom: 0.5em;
+  font-family: Comic Sans MS;
+  font-size: 2em;
+  text-align: center;
+}
+section .about-me-details .about-buttons {
+  text-align: center;
+  margin-top: 0.5em;
+}
+section .about-buttons a {
+  padding: 0.3em 1em 0.4em 1em;
+  outline: none;
+  border: 1.5px solid rgb(180, 6, 34);
+  background-color: var(--white);
+  border-radius: 1em;
+  font-size: 0.85em;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+section .about-buttons a:hover {
+  color: white;
+  background-color: var(--red);
+}
+section .about-buttons a:active {
+  transform: translateY(1.5px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+section .my-dooses,
+section .testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  text-align: center;
+}
+section .my-dooses .a-do,
+section .testimonials .a-testimony {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+}
+section h1.h1-undeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 100%;
+  font-style: normal;
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+section h1.h1-undeline span {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--red);
+}
+section .my-dooses p,
+section .testimonials p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+section .my-dooses .a-do img {
+  display: block;
+  margin: 30px auto 15px auto;
+  max-width: 100%;
+  width: 90px;
+}
+section .my-dooses h2 {
+  text-align: center;
+  font-size: 1em;
+}
+section .testimonials .a-testimony::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2em;
+  white-space: pre-wrap;
+  min-height: 150px;
+  margin: 0 auto;
+  border-radius: 30px 0 30px 0;
+  position: relative;
+  z-index: -1;
+  color: white;
+  background: var(--red);
+}
+section .testimonials .a-testimony {
+  margin-top: 25px;
+  height: 250px;
+  font-size: 0.85em;
+  padding: 0.5em;
+}
+section .testimonials .a-testimony:nth-of-type(1) {
+  background: url(https://johnfash.com/asset/wt-2.png) no-repeat;
+  background-size: 100px 100px;
+  background-position: center 120px;
+  animation: testimony-image-1;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+section .testimonials .a-testimony:nth-of-type(2) {
+  background: url(https://johnfash.com/asset/wt-1.png) no-repeat;
+  background-size: 100px 100px;
+  background-position: center 120px;
+  animation: testimony-image-2;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+section .testimonials .a-testimony:nth-of-type(1)::before {
+  content: "I wanted a management app for my graphic workshop. \a Then i stumbled across a post on fb for an affordable developer, the rest was history. \a \a";
+  animation: testimony-text-1;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+section .testimonials .a-testimony:nth-of-type(2)::before {
+  content: "I have known him for awhile and i appreciate is technical skills. \a Nothing seems too complex when it comes to Johnson. \a \a";
+  animation: testimony-text-2;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes testimony-image-1 {
+  10% {
+    background: url(https://johnfash.com/asset/wt-2.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: center 120px;
+  }
+  60% {
+    background: url(https://johnfash.com/asset/wt-3.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: center 120px;
+  }
+}
+
+@keyframes testimony-image-2 {
+  10% {
+    background: url(https://johnfash.com/asset/wt-1.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: center 120px;
+  }
+  60% {
+    background: url(https://johnfash.com/asset/wt-4.png) no-repeat;
+    background-size: 100px 100px;
+    background-position: center 120px;
+  }
+}
+@keyframes testimony-text-1 {
+  25% {
+    opacity: 0.1;
+    content: "";
+  }
+  35% {
+    content: "His fee is reasonably cheap compared to others, and he gets the job done. \a \a";
+  }
+  50% {
+    opacity: 1;
+    transform: rotateZ(3deg);
+    background: var(--blue);
+    content: "His fee is reasonably cheap compared to others, and he gets the job done. \a \a";
+  }
+  75% {
+    opacity: 0.1;
+    content: "";
+  }
+  85% {
+    content: "I wanted a management app for my graphic workshop. \a Then i stumbled across a post on fb for an affordable developer, the rest was history. \a \a";
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes testimony-text-2 {
+  25% {
+    opacity: 0.1;
+    content: "";
+  }
+  35% {
+    content: "I saw his post on facebook so i messaged him to build a blog. \a He is fast and i like it so far... \a \a";
+  }
+  50% {
+    opacity: 1;
+    transform: rotateZ(-3deg);
+    background: var(--blue);
+    content: "I saw his post on facebook so i messaged him to build a blog. \a He is fast and i like it so far... \a \a";
+  }
+  75% {
+    opacity: 0.1;
+    content: "";
+  }
+  85% {
+    content: "I have known him for awhile and i appreciate is technical skills. \a Nothing seems too complex when it comes to Johnson. \a \a";
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* about.php */
+
+/* resume.php */
+section .resume-header {
+  display: flex;
+  background: var(--lightgreyFake);
+  padding: 1em;
+  border-radius: 0 2em 0 2em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+section .resume-header h1 {
+  font-family: Poppins, Helvetica, sans-serif;
+  font-size: 2.2em;
+  padding: 20px 0;
+}
+section .resume-header p {
+  flex: 1 1 100%;
+  font-size: 0.9em;
+}
+section .resume-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.4em;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-position: under;
+  text-decoration-color: var(--red);
+}
+#timeline .timeline-item:after,
+header:before,
+#timeline .timeline-item:before {
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+#timeline *,
+#timeline *:before,
+#timeline *:after {
+  box-sizing: border-box;
+}
+#timeline {
+  position: relative;
+  transition: all 0.4s ease;
+  margin: 50px 20px;
+  padding: 0px;
+  width: 90%;
+}
+#timeline:before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: var(--red);
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+#timeline:after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+
+#timeline .timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+#timeline .timeline-item .timeline-icon {
+  background: var(--red);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  overflow: hidden;
+  margin-left: -18px;
+  border-radius: 50%;
+  box-shadow: 0.3px 1px 0 rgba(0, 0, 0, 0.1), -0.3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+#timeline .timeline-item .timeline-content {
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0.3px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: 90%;
+  float: right;
+}
+
+#timeline .timeline-item .timeline-content h2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background: var(--red);
+  color: #fff;
+  margin: -20px -20px 0 -20px;
+  font-weight: 300;
+  font-size: 1.2em;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+#timeline .timeline-item .timeline-content h2 span {
+  font-size: 0.8em;
+}
+#timeline .timeline-item .timeline-content p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding-top: 10px;
+}
+#timeline .timeline-item .timeline-content:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  left: 10%;
+  margin-left: -6px;
+  border-left: 0;
+  border-right: 7px solid var(--red);
+}
+
+#timeline .timeline-item .timeline-content.right {
+  float: right;
+}
+#timeline .timeline-item .timeline-content.right:before {
+  content: "";
+  right: 45%;
+  left: 10%;
+  margin-left: -6px;
+  border-left: 0;
+  border-right: 7px solid var(--red);
+}
+
+section .skills-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section .skills-flex h1 {
+  margin-bottom: 30px;
+}
+section .skills-flex .design {
+  flex: 1 1 100%;
+}
+section .skills-flex .coding {
+  flex: 1 1 100%;
+}
+section .skills-flex p {
+  margin: 20px 0 2px 0;
+  font-size: 0.9em;
+  font-weight: 600;
+  font-family: Poppins, Helvetica, sans-serif;
+}
+section .skills-flex .progress-bar {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: 1px solid #c6c6c6;
+  padding: 0.1em;
+  box-sizing: border-box;
+  border-radius: 1em;
+}
+section .skills-flex .progress-bar span {
+  display: grid;
+  background: var(--red);
+  position: relative;
+  font-size: 0.6em;
+  padding: 0.25em;
+  margin: 0;
+  color: white;
+  text-align: right;
+  border-radius: 1em;
+}
+section .skills-flex .progress-bar span::after {
+  position: absolute;
+  top: -18px;
+  right: 0;
+  font-size: 1.2em;
+  color: grey;
+}
+
+section .skills-flex span.ui::after {
+  content: "92%";
+}
+section .skills-flex span.mysql::after {
+  content: "93%";
+}
+section .skills-flex span.gimp::after {
+  content: "70%";
+}
+section .skills-flex span.html::after {
+  content: "98%";
+}
+section .skills-flex span.css::after {
+  content: "95%";
+}
+section .skills-flex span.wire-f::after {
+  content: "80%";
+}
+section .skills-flex span.react::after {
+  content: "96%";
+}
+section .skills-flex span.vue::after {
+  content: "89%";
+}
+section .skills-flex span.node::after {
+  content: "97%";
+}
+section .skills-flex span.javascript::after {
+  content: "99%";
+}
+section .skills-flex span.laravel::after {
+  content: "92%";
+}
+section .skills-flex span.php::after {
+  content: "96%";
+}
+/* resume.php */
+
+/* portfolio.PHP */
+section .portfolio {
+  display: flex;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+section .PortFjobs {
+  position: relative;
+  flex: 1 1 100%;
+  color: white;
+  margin-top: 30px;
+  padding: 0.2em;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 1.5em;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+}
+section .PortFjobs img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5em;
+  object-fit: cover;
+}
+section .PortFjobs .job-desc {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0.2em;
+  opacity: 1;
+  box-sizing: border-box;
+}
+section .PortFjobs .job-desc .desc-inner {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2em 0.2em 0.5em 0.2em;
+  background: var(--blueHue);
+  height: inherit;
+  opacity: 0;
+  box-sizing: border-box;
+  border-radius: 1.5em;
+  text-align: center;
+  transform: rotateZ(360deg);
+  transition: all 0.5s;
+}
+section .PortFjobs h1 {
+  text-align: left;
+  display: inline-block;
+  margin: 10px;
+  padding: 0.1em 0.7em 0.4em;
+  border-radius: 1em;
+  background: #fff6f6;
+  color: red;
+  font-weight: bolder;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+section .PortFjobs .job-desc p {
+  font-size: 0.9em;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+section .PortFjobs .job-desc p:nth-of-type(1) {
+  text-align: left;
+  padding: 0 1em;
+  font-weight: bold;
+  line-height: 1.5;
+}
+section .PortFjobs p a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background: white;
+  font-size: 0.7em;
+  border: 1px solid var(--lightgrey);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+  padding: 0.2em 0.3em 0.3em 0.3em;
+  border-radius: 0.2em;
+}
+section .PortFjobs p a:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5px);
+}
+section .PortFjobs .job-desc span a {
+  border: 1px solid var(--whitesmoke);
+  border-radius: 0.2em;
+  padding: 0 0.5em;
+  color: var(--black);
+  font-size: 0.9em;
+  background: var(--white);
+  text-decoration: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+section .PortFjobs .job-desc span a:hover {
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5px);
+}
+section .PortFjobs:hover {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(0.5px);
+}
+section .PortFjobs:hover .desc-inner {
+  opacity: 1;
+}
+section .jobs {
+  display: flex;
+  flex-wrap: wrap;
+}
+section .jobs img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  border-radius: 0.5em;
+  object-fit: cover;
+}
+section .jobs .jobSlide,
+section .jobs .slide-desc,
+section .jobs .close {
+  flex: 1 1 100%;
+  position: relative;
+}
+section .jobs .close {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5em;
+  margin: 10px 0;
+  user-select: none;
+}
+section .jobs .close span {
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+}
+section .jobs .close span:hover {
+  background: rgba(128, 0, 64, 0.1);
+}
+section .jobs .slide-desc {
+  border: 1px solid var(--whitesmoke);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+section .jobs .jobSlide .imageContainer,
+section .jobs .jobSlide .youtube {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  border-radius: 0.5em;
+}
+section .jobs .jobSlide .imageContainer {
+  display: block;
+  padding-bottom: 3rem;
+  object-fit: contain;
+}
+section .jobs .jobSlide .imageContainer h2 {
+  padding: 1rem;
+}
+section .jobs .jobSlide .imageContainer img {
+  display: block;
+  max-height: 400px;
+  margin: auto;
+  width: auto !important;
+}
+section .jobs .jobSlide .youtube {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+section .jobs .jobSlide .youtube iframe,
+section .jobs .jobSlide .youtube object,
+section .jobs .jobSlide .youtube embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section .jobs .slide-desc {
+  align-self: flex-start;
+  border-radius: 0.5em;
+}
+section .jobs .jobText {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+section .jobs .slide-desc h3 {
+  margin: 10px 0;
+}
+section .jobs .slide-desc a {
+  text-decoration: none;
+  margin-bottom: 0.3em;
+  color: inherit;
+}
+section .jobs .slide-desc a img {
+  display: inline-block;
+  background: grey;
+  margin-right: 5px;
+  width: 25px;
+  padding: 3px;
+  outline: none;
+  border: none;
+}
+section .jobs .slide-desc a img:hover {
+  background-color: #3daddd;
+}
+section .jobs p a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9em;
+  margin-right: 0.15em;
+  border: 1px solid lightgrey;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 0.2em 0.3em 0.3em 0.3em;
+  border-radius: 0.2em;
+}
+section .jobs p a:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5px);
+}
+section .jobs .slide-desc p {
+  line-height: 1.5;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+section .jobs .slide-desc .to {
+  margin-left: 30px;
+}
+section .jobs .prev,
+section .jobs .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 16px;
+  margin-top: -22px;
+  color: var(--white);
+  opacity: 0;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+section .jobs .next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+section .jobs .dots {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+section .jobs .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+section .jobs .imageContainer:hover .prev,
+section .jobs .imageContainer:hover .next {
+  opacity: 1;
+}
+section .jobs .active,
+section .jobs .dot:hover {
+  background-color: #717171;
+}
+section .jobOff,
+section .portfolioOff {
+  display: none;
+}
+/* portfolio.PHP */
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+  }
+  header {
+    display: none;
+  }
+  nav {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 200px;
+    transform: translateX(0px);
+  }
+  section {
+    margin-left: 200px;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+  }
+  section .about-me .about-me-header {
+    margin-top: 0;
+  }
+  section .my-dooses .a-do {
+    flex: 0 1 33.33%;
+    box-sizing: border-box;
+  }
+  section .testimonials .a-testimony {
+    flex: 0 1 50%;
+    box-sizing: border-box;
+  }
+  section .my-dooses .a-do:not(:last-child) {
+    padding-right: 1em;
+  }
+
+  /* resume.PHP */
+  section .resume-header {
+    margin-top: 0;
+  }
+  section .resume-header h1 {
+    flex: 0 1 50%;
+    font-size: 2.8em;
+    padding: 20px 0;
+  }
+  section .resume-header p {
+    flex: 0 1 50%;
+    text-align: right;
+  }
+  #timeline {
+    margin: 50px auto;
+    padding: 0 10px;
+    width: 99%;
+  }
+  #timeline:before {
+    left: 50%;
+  }
+  #timeline .timeline-item .timeline-content {
+    width: 45%;
+    float: none;
+  }
+  #timeline .timeline-item .timeline-content:before {
+    left: 45%;
+    margin-left: inherit;
+    border-left: 7px solid var(--red);
+    border-right: 0;
+  }
+  #timeline .timeline-item .timeline-content.right:before {
+    left: inherit;
+    margin-left: inherit;
+    border-left: 0;
+    border-right: 7px solid var(--red);
+  }
+  #timeline .timeline-item .timeline-icon {
+    left: 50%;
+  }
+  section .skills-flex .design {
+    flex: 0 1 47%;
+    margin: 0 auto;
+  }
+  section .skills-flex .coding {
+    flex: 0 1 47%;
+    margin: 0 auto;
+  }
+  /* resume.PHP */
+
+  /* portfolio.PHP */
+  section .PortFjobs {
+    flex: 0 1 48%;
+  }
+  section .PortFjobs:nth-of-type(odd) {
+    margin-right: auto;
+  }
+  section .PortFjobs:nth-of-type(even) {
+    margin-left: auto;
+  }
+  section .jobs .jobSlide {
+    flex: 0 1 70%;
+    margin-right: auto;
+  }
+  section .jobs .slide-desc {
+    flex: 0 1 27%;
+    margin-left: auto;
+  }
+  /* portfolio.PHP */
+}
+
+/* contact.PHP */
+.contactForm form {
+  max-width: 680px;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  padding: 0.5em 2.5em;
+  box-sizing: border-box;
+  text-shadow: rgba(0, 0, 0, 0.5);
+  box-shadow: 20px 15px 25px rgba(0, 0, 0, 0.1),
+    -3px -5px 10px rgba(0, 0, 0, 0.04);
+}
+.contactForm h1 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+.contactForm p {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 0.85em;
+}
+.contactForm input,
+.contactForm textarea,
+.contactForm select {
+  border-width: 0 0 1px 0;
+  outline: none;
+  padding: 0 0 1em 0;
+  font-size: 1em;
+  width: 100%;
+}
+select option {
+  font-size: 1.1em;
+}
+.contactForm textarea {
+  width: 100%;
+  resize: vertical;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: grey lightgrey;
+}
+.contactForm input:focus,
+.contactForm textarea:focus {
+  resize: vertical;
+}
+.contactForm button {
+  width: 100%;
+  text-align: center;
+  margin: 1.5em 0;
+  border-radius: 1.5em;
+  color: white;
+  outline: none;
+  background: linear-gradient(45deg, purple, gold);
+  padding: 0.4em 0 0.7em 0;
+  border: none;
+}
+.contactForm button:active {
+  transform: translateY(1px);
+}
+.contactForm select {
+  background: white;
+}
+.contactForm select .optionSeperator {
+  font-size: 0.5pt;
+  background: black;
+}
+.contactForm span {
+  font-size: 0.75em;
+  color: red;
+  height: 1em;
+}
+/* contact.php */
+@media screen and (min-width: 800px) {
+  section .about-me .about-me-profile {
+    flex: 0 1 49%;
+    margin-right: auto;
+  }
+  section .about-me .about-me-details {
+    flex: 0 1 49%;
+    margin-left: auto;
+  }
+}
+
+/* other */
+
+.secCont {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+.m-1 {
+  margin-bottom: 0.5rem !important;
+}
+.m-2 {
+  margin-bottom: 1rem !important;
+}
+.m-3 {
+  margin-bottom: 1.5rem !important;
+}
+.secCont .block2,
+.secCont .block1,
+.secCont .block3 {
+  position: relative;
+  flex: 0 1 30%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
+    -2px -5px 10px rgba(71, 48, 48, 0.01);
+  border-radius: 5px;
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  cursor: pointer;
+  /* justify-content: center; */
+}
+.secCont.proj .block2,
+.secCont.proj .block1,
+.secCont.proj .block3 {
+  max-height: 600px;
+  flex: 0 1 45%;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding-left: 4rem;
+  margin-bottom: 5rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+.secCont.proj .block1,
+.bg-1 {
+  background-color: #f5f8fe;
+}
+.secCont.proj .block2,
+.bg-2 {
+  background-color: #f7f7f7;
+}
+.secCont.proj .block3,
+.bg-3 {
+  background-color: #fefef0;
+}
+.bg-4 {
+  background-color: #e7f0fd;
+}
+
+.secCont.proj .title {
+  font-size: 3rem;
+  padding: 3rem 0;
+}
+.secCont.proj img {
+  position: relative;
+  left: 5rem;
+}
+@media (max-width: 1100px) {
+  .secCont.proj .block2,
+  .secCont.proj .block1,
+  .secCont.proj .block3 {
+    max-height: 500px;
+    padding-left: 3rem;
+    flex: 0 1 48%;
+    margin-bottom: 2rem;
+  }
+  .secCont.proj .title {
+    font-size: 2rem;
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 856px) {
+  .secCont.proj .block2,
+  .secCont.proj .block1,
+  .secCont.proj .block3 {
+    max-height: 500px;
+    padding-left: 3rem;
+    flex: 0 1 100%;
+    margin-bottom: 2.5rem;
+  }
+  .secCont.proj .title {
+    padding: 2rem 0;
+  }
+  .secCont.proj img {
+    left: 3rem;
+  }
+}
+
+.secCont.proj small {
+  font-size: 1.5rem;
+  color: #4c40f7;
+}
+
+.secCont.tech .block2,
+.secCont.tech .block1,
+.secCont.tech .block3 {
+  flex: 0 1 22%;
+}
+.secCont.tech img {
+  width: 80%;
+}
+
+@media (max-width: 856px) {
+  .secCont.tech .block2,
+  .secCont.tech .block1,
+  .secCont.tech .block3 {
+    flex: 0 1 48%;
+  }
+}
+@media (max-width: 566px) {
+  .secCont.tech .block2,
+  .secCont.tech .block1,
+  .secCont.tech .block3 {
+    flex: 0 1 100%;
+  }
+}
+
+.secCont .block2 a,
+.secCont .block1 a,
+.secCont .block3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.secCont .block2:hover,
+.secCont .block1:hover,
+.secCont .block3:hover {
+  box-shadow: 1px 1px 2px rgba(71, 48, 48, 0.1);
+  transform: translateY(-1px);
+}
+
+.secCont .block1::after,
+.secCont .block3::after,
+.secCont .block3::before,
+.secCont .block1::before {
+  content: "";
+  position: absolute;
+  height: 15em;
+  border-radius: 100%;
+  width: 15em;
+  background: rgba(249, 104, 208, 0.1);
+  right: -25%;
+  top: -25%;
+  z-index: -6;
+}
+.secCont .block1::after {
+  height: 2em;
+  width: 2em;
+  right: 0;
+  top: 110%;
+  background: rgb(26, 29, 136);
+}
+.secCont .block3::after {
+  top: 87%;
+  right: 15px;
+  width: 0.8em;
+  height: 0.8em;
+  background: rgb(206, 69, 254);
+  z-index: 4;
+  animation: grow 0.3s infinite;
+}
+.secCont .block3::before {
+  top: 104%;
+  right: 15%;
+  width: 1.5em;
+  height: 1.5em;
+  background: rgb(255, 55, 103);
+}

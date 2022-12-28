@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JohnFash - About</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://johnfash.com/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://johnfash.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://johnfash.com/favicon-16x16.png">
+  <link rel="icon" href="https://johnfash.com/favicon-16x16.ico" sizes="16x16" />
+  <link rel="icon" href="https://johnfash.com/favicon-32x32.ico" sizes="32x32" />
+  <link rel="icon" href="https://johnfash.com/favicon-48x48.ico" sizes="48x48" />
+  <link rel="icon" href="https://johnfash.com/favicon-197x197.ico" sizes="197x197" />
+  <link rel="manifest" href="https://johnfash.com/site.webmanifest">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215053336-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-215053336-1');
+  </script>
+  <!-- <link rel="stylesheet" href="main.css"> -->
+  <link rel="stylesheet" href="https://johnfash.com/about/main.css">
+  <!-- <link rel="stylesheet" href="https://johnfash.com/about/main.css"> -->
+  <meta name="description" content="We're an independent web and mobile application development agency located in Lagos, Lekki. We’re developed custom web and mobile solutions for quite a plethora of our clients. Our portfolio have boasted over 100 completed projects and applications, and we will be glad to share some o these as a reference if you choose one of our services today. Chat with us today and lets bring your idea/project live for all to see!" />
+  <meta name="Keywords" content="We're an independent web and mobile application development agency located in Lagos, Lekki. We’re developed custom web and mobile solutions for quite a plethora of our clients. Our portfolio have boasted over 100 completed projects and applications, and we will be glad to share some o these as a reference if you choose one of our services today. Chat with us today and lets bring your idea/project live for all to see!">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="JohnFash - about me | Fashanu Tosin" />
+  <meta property="og:description" content="We're an independent web and mobile application development agency located in Lagos, Lekki. We’re developed custom web and mobile solutions for quite a plethora of our clients. Our portfolio have boasted over 100 completed projects and applications, and we will be glad to share some o these as a reference if you choose one of our services today. Chat with us today and lets bring your idea/project live for all to see!" />
+  <meta property="article:publisher" content="https://www.facebook.com/WebDevs7" />
+  <meta property="og:image" content="https://johnfash.com/asset/web-devs-logo.png" />
+  <meta name="twitter:data1" content="Johnson Fashanu">
+</head>
+
+<body>
+  <input type="checkbox" name="" value="" id="hamburger">
+  <header>
+    <div class="header">JOHNSON FASHANU</div>
+    <label for="hamburger" class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </header>
+  <nav>
+    <div class="nav-flex">
+      <div class="top-nav">
+        <img src="https://johnfash.com/asset/profile.png" alt="" id="profile-image">
+        <div class="image-detail">
+          <h4>John Fash.</h4>
+          <p>Lagos, NG</p>
+        </div>
+        <hr />
+        <div class="links">
+          <a href="https://johnfash.com/" class="home-anchor">
+            <span>Home</span>
+          </a>
+          <a href="https://johnfash.com/about/" class="about-anchor <?php echo $activeAbout; ?>">
+            <span>About</span>
+          </a>
+          <a href="https://johnfash.com/about/resume/" class="resume-anchor <?php echo $activeResume; ?>">
+            <span>Resume</span>
+          </a>
+          <a href="https://johnfash.com/about/portfolio/" class="portfolio-anchor <?php echo $activePortfolio; ?>">
+            <span>Portfolio</span>
+          </a>
+          <a href="https://johnfash.com/about/contact/" class="contact-anchor <?php echo $activeContact; ?>">
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+      <div class="social">
+        <span>
+          <a href="https://web.facebook.com/iamjohnfash"><img src="https://johnfash.com/asset/facebook.png" alt="fb"></a>
+          <a href="https://www.linkedin.com/in/johnfash/"><img src="https://johnfash.com/asset/linkedin.png" alt="in"></a>
+          <a href="https://github.com/johnsonfash"><img src="https://johnfash.com/asset/github.png" alt="git"></a>
+        </span>
+        <div class="copyright">
+          <?= date("Y"); ?> © JohnFash. <br />
+          All Right Reserved.
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="about-me" onclick="hamburger.checked = false;">
+
+<div class="portfolio">
+  <div class="secCont proj">
+    <a class="block1" onclick="displayJob('jobDisp', 6)">
+      <div class="title">
+        Betascratch
+        <small class="">- web</small>
+      </div>
+      <img src="https://johnfash.com/asset/mock/betascratch.gif" alt="" srcset="" />
+    </a>
+    <a class="block3" onclick="displayJob('jobDisp', 5)">
+      <div class="title">
+        Whizz
+        <small class="">- mobile</small>
+      </div>
+      <img src="https://johnfash.com/asset/mock/whizz.gif" alt="" srcset="" />
+    </a>
+    <a class="block2" onclick="displayJob('jobDisp', 0)">
+      <div class="title">
+        Tradersconnect
+        <small class="">- mobile</small>
+      </div>
+      <img src="https://johnfash.com/asset/mock/tradersconnect.gif" alt="" srcset="" />
+    </a>
+    <a class="block1" onclick="displayJob('jobDisp', 4)">
+      <div class="title">
+        Authenticpass
+        <small class="">- mobile</small>
+      </div>
+      <img src="https://johnfash.com/asset/home/authenticpass/misc/canvas-scanning.png" alt="" srcset="" />
+    </a>
+    <a class="block3" onclick="displayJob('jobDisp', 2)">
+      <div class="title">
+        Guardplus
+        <small class="">- mobile</small>
+      </div>
+      <img src="https://johnfash.com/asset/home/guardplus/misc/canvas-guard.png" alt="" srcset="" />
+    </a>
+    <a class="block2" onclick="displayJob('jobDisp', 7)">
+      <div class="title">
+        Breet
+        <small class="">- web</small>
+      </div>
+      <img src="https://johnfash.com/asset/home/heroku/mobile(2).gif" alt="" srcset="" />
+    </a>
+    <a class="block2" onclick="displayJob('jobDisp', 8)">
+      <div class="title">
+        Baros Logistics
+        <small class="">- web</small>
+      </div>
+      <img src="https://johnfash.com/asset/home/heroku/mobile(1).gif" alt="" srcset="" />
+    </a>
+    <a class="block2" onclick="displayJob('jobDisp', 3)">
+      <div class="title">
+        J-CMS
+        <small class="">- web</small>
+      </div>
+      <img src="https://johnfash.com/asset/home/johnfash-blog/misc/mobile-posts.png" alt="" srcset="" />
+    </a>
+    <a class="block2" onclick="displayJob('jobDisp', 1)">
+      <div class="title">
+        Cyberstrike
+        <small class="">- web</small>
+      </div>
+      <img src="https://johnfash.com/asset/home/cyberstrike/misc/mobile-index.png" alt="" srcset="" />
+    </a>
+    <a class="block2">
+      <div class="title">
+        Cyberfocus
+        <small class="">- web</small>
+      </div>
+      <img src="https://johnfash.com/asset/home/cyberfocus/mobile1.png" alt="" srcset="" />
+    </a>
+  </div>
+</div>
+
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+    <div class="imageContainer bg-1">
+      <h2>Desktop (web view)</h2> <br>
+      <img class="jobImg-1" src="https://johnfash.com/asset/home/tradersconnect/misc/desktop-index.png" alt="">
+      <img class="jobImg-1" src="https://johnfash.com/asset/home/tradersconnect/misc/desktop-product.png" alt="">
+      <img class="jobImg-1" src="https://johnfash.com/asset/home/tradersconnect/misc/desktop-checkout.png" alt="">
+      <img class="jobImg-1" src="https://johnfash.com/asset/home/tradersconnect/misc/desktop-vendor-index.png" alt="">
+      <img class="jobImg-1" src="https://johnfash.com/asset/home/tradersconnect/misc/desktop-slide-2.png" alt="">
+      <img class="jobImg-1" src="https://johnfash.com/asset/home/tradersconnect/misc/desktop-product-list.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-1')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-1')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-1" onclick="currentSlide(1, '-1')"></span>
+        <span class="dot dot-1" onclick="currentSlide(2, '-1')"></span>
+        <span class="dot dot-1" onclick="currentSlide(3, '-1')"></span>
+        <span class="dot dot-1" onclick="currentSlide(4, '-1')"></span>
+        <span class="dot dot-1" onclick="currentSlide(5, '-1')"></span>
+        <span class="dot dot-1" onclick="currentSlide(6, '-1')"></span>
+      </div>
+    </div>
+
+    <div class="imageContainer bg-2">
+      <h2>Mobile (web view)</h2> <br>
+      <img class="jobImg-2" src="https://johnfash.com/asset/mock/tradersconnect.gif" alt="">
+      <img class="jobImg-2" src="https://johnfash.com/asset/home/tradersconnect/misc/mobile-index.png" alt="">
+      <img class="jobImg-2" src="https://johnfash.com/asset/home/tradersconnect/misc/mobile-checkout.png" alt="">
+      <img class="jobImg-2" src="https://johnfash.com/asset/home/tradersconnect/misc/mobile-product.png" alt="">
+      <img class="jobImg-2" src="https://johnfash.com/asset/home/tradersconnect/misc/mobile-shop.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-2')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-2')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-2" onclick="currentSlide(1, '-2')"></span>
+        <span class="dot dot-2" onclick="currentSlide(2, '-2')"></span>
+        <span class="dot dot-2" onclick="currentSlide(3, '-2')"></span>
+        <span class="dot dot-2" onclick="currentSlide(4, '-2')"></span>
+        <span class="dot dot-2" onclick="currentSlide(5, '-2')"></span>
+      </div>
+    </div>
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://tradersconnect.com.ng">TradersConnect</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Jul 7, 2021</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Nov 3, 2021</p>
+    <p>
+      Tradersconnect is an e-commerce company in Nigeria. <br><br>
+      <u><b>Actities</b></u> <br>
+      1. <b>Wireframe</b> & <b>sketch</b> of the entire platform (web, admin, vendor, mobile app). <br> <br>
+      2. I converted wireframes into actual code. <br><br>
+      3. <b>Nextjs</b> for web rather than <b>react</b> due to <b>SEO</b>, using a combination of <b>redux</b> and <b>server side rendering</b> when applicable. <br><br>
+      4. <b>Backend</b> & <b>security</b> features using a combination of <b>php</b> and a light weight version of <b>cakephp</b>. <br> <br>
+      5. Vendor and admin (web) dashboard with <b>react, redux</b> and the <b>api</b> from the backend. <br><br>
+      6. Unit and integration testing of all platforms, <b>android</b>, <b>ios</b>, <b>web (customer, vendor, admin)</b> application. <br> <br>
+      7. Future update and testing continues.
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/reactjs&page=1">reactjs</a>
+      <a href="https://johnfash.com/category/nextjs&page=1">nextjs</a>
+      <a href="https://johnfash.com/category/capacitorjs&page=1">capacitorjs</a>
+      <a href="https://johnfash.com/category/ionic&page=1">ionic</a>
+      <a href="https://johnfash.com/category/php&page=1">php</a>
+      <a href="https://johnfash.com/category/mysql&page=1">mysql</a>
+      <a href="https://johnfash.com/category/cakephp&page=1">cakephp</a>
+      <a href="https://johnfash.com/category/ios&page=1">ios</a>
+      <a href="https://johnfash.com/category/android&page=1">android</a>
+      <a href="https://johnfash.com/category/redux&page=1">redux</a>
+      <a href="https://johnfash.com/category/api&page=1">api</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+    <div class="imageContainer bg-3">
+      <h2>Desktop (web view)</h2> <br>
+      <img class="jobImg-3" src="https://johnfash.com/asset/home/cyberstrike/misc/desktop-index.png" alt="">
+      <img class="jobImg-3" src="https://johnfash.com/asset/home/cyberstrike/misc/desktop-company.png" alt="">
+      <img class="jobImg-3" src="https://johnfash.com/asset/home/cyberstrike/misc/desktop-service.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-3')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-3')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-3" onclick="currentSlide(1, '-3')"></span>
+        <span class="dot dot-3" onclick="currentSlide(2, '-3')"></span>
+        <span class="dot dot-3" onclick="currentSlide(3, '-3')"></span>
+      </div>
+    </div>
+
+    <div class="imageContainer bg-1">
+      <h2>Mobile (web view)</h2> <br>
+      <img class="jobImg-4" src="https://johnfash.com/asset/home/cyberstrike/misc/mobile-index.png" alt="">
+      <img class="jobImg-4" src="https://johnfash.com/asset/home/cyberstrike/misc/mobile-service.png" alt="">
+      <img class="jobImg-4" src="https://johnfash.com/asset/home/cyberstrike/misc/mobile-company.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-4')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-4')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-4" onclick="currentSlide(1, '-4')"></span>
+        <span class="dot dot-4" onclick="currentSlide(2, '-4')"></span>
+        <span class="dot dot-4" onclick="currentSlide(3, '-4')"></span>
+      </div>
+    </div>
+
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://cyberstrike.ng">CyberStrike</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Nov 14, 2021</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Nov 17, 2021</p>
+    <p>
+      CyberStrike is the main webpage for cyberstrike security culsulting firm. <br> <br>
+      This project was built using a combination of <b>html</b>, <b>css</b>, <b>javascript</b>, <b>bootstrap</b>, and <b>php</b> for its contact form.
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/html&page=1">html</a>
+      <a href="https://johnfash.com/category/css&page=1">css</a>
+      <a href="https://johnfash.com/category/javascript&page=1">javascript</a>
+      <a href="https://johnfash.com/category/bootstrap&page=1">bootstrap</a>
+      <a href="https://johnfash.com/category/php&page=1">php</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+    <div class="imageContainer bg-1">
+      <h2>Desktop (web view)</h2> <br>
+      <img class="jobImg-5" src="https://johnfash.com/asset/home/guardplus/misc/desktop-admin-index.png" alt="">
+      <img class="jobImg-5" src="https://johnfash.com/asset/home/guardplus/misc/desktop-admin-alarm.png" alt="">
+      <img class="jobImg-5" src="https://johnfash.com/asset/home/guardplus/misc/desktop-admin-visitor.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-5')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-5')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-5" onclick="currentSlide(1, '-5')"></span>
+        <span class="dot dot-5" onclick="currentSlide(2, '-5')"></span>
+        <span class="dot dot-5" onclick="currentSlide(3, '-5')"></span>
+      </div>
+    </div>
+
+    <div class="imageContainer bg-2">
+      <h2>Mobile (app view)</h2> <br>
+      <img class="jobImg-6" src="https://johnfash.com/asset/home/guardplus/misc/canvas-guard.png" alt="">
+      <img class="jobImg-6" src="https://johnfash.com/asset/home/guardplus/misc/canvas-panic-button.png" alt="">
+      <img class="jobImg-6" src="https://johnfash.com/asset/home/guardplus/misc/canvas-scanning.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-6')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-6')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-6" onclick="currentSlide(1, '-6')"></span>
+        <span class="dot dot-6" onclick="currentSlide(2, '-6')"></span>
+        <span class="dot dot-6" onclick="currentSlide(3, '-6')"></span>
+      </div>
+    </div>
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://portal.guardplusprotection.com/">GuardPlus</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Nov -, 2021</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Nov 30, 2021</p>
+    <p>
+      Guardplus is a security & management company in Nigeria. <br><br>
+      <u><b>Actities</b></u> <br>
+      1. <b>Wireframe</b> & <b>sketch</b> of the entire platform (admin, mobile app). <br> <br>
+      2. Solution for <b>low latensy</b> on <b>javascript</b> code execution before <b>html</b> and useful fix for future project on <b>vuejs</b>. <br> <br>
+      3. This project required creating <b>qr-codes</b> on the admin dashboard, and scanning the <b>qr-code</b> using a <b>camera</b> on the mobile application. <br> <br>
+      4. Using <b>cordova</b> and its <b>plugins</b>, a hybride (<b>ios</b> & <b>android</b>) application was built for this. <br> <br>
+      5. Test & maintenance.
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/html&page=1">html</a>
+      <a href="https://johnfash.com/category/vue&page=1">vuejs</a>
+      <a href="https://johnfash.com/category/ios&page=1">ios</a>
+      <a href="https://johnfash.com/category/android&page=1">android</a>
+      <a href="https://johnfash.com/category/cordova&page=1">cordova</a>
+      <a href="https://johnfash.com/category/css&page=1">css</a>
+      <a href="https://johnfash.com/category/mysql&page=1">mysql</a>
+      <a href="https://johnfash.com/category/javascript&page=1">javascript</a>
+      <a href="https://johnfash.com/category/php&page=1">php</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+    <div class="imageContainer bg-3">
+      <h2>Desktop (web view)</h2> <br>
+      <img class="jobImg-7" src="https://johnfash.com/asset/home/johnfash-blog/misc/desktop-edit.png" alt="">
+      <img class="jobImg-7" src="https://johnfash.com/asset/home/johnfash-blog/misc/desktop-edit-2.png" alt="">
+      <img class="jobImg-7" src="https://johnfash.com/asset/home/johnfash-blog/misc/desktop-posts.png" alt="">
+      <img class="jobImg-7" src="https://johnfash.com/asset/home/johnfash-blog/misc/desktop-account.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-7')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-7')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-7" onclick="currentSlide(1, '-7')"></span>
+        <span class="dot dot-7" onclick="currentSlide(2, '-7')"></span>
+        <span class="dot dot-7" onclick="currentSlide(3, '-7')"></span>
+        <span class="dot dot-7" onclick="currentSlide(4, '-7')"></span>
+      </div>
+    </div>
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://johnfash.com/about/contact/">J-CMS</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Nov 7, 2020</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Dec 29, 2020</p>
+    <p>J-CMS aims at simplicity and light weight. It outputs clean json blocks (developers) or include the entire project and follow the simplified instructions if you are not a professional developer yet. <br><br>
+      <u><b>Actities</b></u> <br>
+      1. <b>Wireframe</b> & <b>sketch</b> of the entire system. <br> <br>
+      2. <b>Wireframe</b> to actual code with dummy data. <br> <br>
+      3. Detailed research on the best <b>block editor</b> out there, was tested, tweak and integrated with the project. <br> <br>
+      4. Coding and integration of most important part of (<b>wordpress</b> - <b>Yoast SEO</b>) metrics e.g word count, sentense, spellings, seo (key words, mobile and desktop snippet view on google), tags, grading and many more... <br> <br>
+      5. Testing, update and future integration continues.
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/html&page=1">html</a>
+      <a href="https://johnfash.com/category/css&page=1">css</a>
+      <a href="https://johnfash.com/category/mysql&page=1">mysql</a>
+      <a href="https://johnfash.com/category/javascript&page=1">javascript</a>
+      <a href="https://johnfash.com/category/php&page=1">php</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+    <div class="imageContainer bg-3">
+      <h2>Desktop (web view)</h2> <br>
+      <img class="jobImg-8" src="https://johnfash.com/asset/home/authenticpass/misc/desktop-home.png" alt="">
+      <img class="jobImg-8" src="https://johnfash.com/asset/home/authenticpass/misc/desktop-history.png" alt="">
+      <img class="jobImg-8" src="https://johnfash.com/asset/home/authenticpass/misc/desktop-dashboard.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-8')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-8')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-8" onclick="currentSlide(1, '-8')"></span>
+        <span class="dot dot-8" onclick="currentSlide(2, '-8')"></span>
+        <span class="dot dot-8" onclick="currentSlide(3, '-8')"></span>
+      </div>
+    </div>
+
+    <div class="imageContainer bg-1">
+      <h2>Mobile (app view)</h2> <br>
+      <img class="jobImg-9" src="https://johnfash.com/asset/home/authenticpass/misc/canvas-scanning.png" alt="">
+      <img class="jobImg-9" src="https://johnfash.com/asset/home/authenticpass/misc/canvas-product-detail.png" alt="">
+      <img class="jobImg-9" src="https://johnfash.com/asset/home/authenticpass/misc/canvas-index.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-9')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-9')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-9" onclick="currentSlide(1, '-9')"></span>
+        <span class="dot dot-9" onclick="currentSlide(2, '-9')"></span>
+        <span class="dot dot-9" onclick="currentSlide(3, '-9')"></span>
+      </div>
+    </div>
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://authenticpass.com/">AuthenticPass</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Nov 30, 2020</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Dec 28, 2020</p>
+    <p>
+      AuthenticPass is legally bounded product barcode issuing company. <br><br>
+      They issue unique encrypted barcode for each product data-print,
+      and has an app that can only scan this unique code and interprete its data. <br> <br>
+      <u><b>Actities</b></u> <br>
+      1. <b>Wireframe</b> & <b>sketch</b> of the entire platform (web, admin, company, mobile app). <br> <br>
+      2. <b>Hybrid</b> mobile application (capacitorjs). <br><br>
+      3. <b>Encryption</b> and <b>decryption</b> <b>algorithm</b> for the <b>barcode</b> data, tweak on <b>barcode scanning plugin</b> for mobile app. <br> <br>
+      4. Integration/Unit test for <b>android</b> & <b>ios</b> application. <br> <br>
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/html&page=1">css</a>
+      <a href="https://johnfash.com/category/react&page=1">react</a>
+      <a href="https://johnfash.com/category/redux&page=1">redux</a>
+      <a href="https://johnfash.com/category/ionic&page=1">ionic</a>
+      <a href="https://johnfash.com/category/capacitorjs&page=1">capacitorjs</a>
+      <a href="https://johnfash.com/category/javascript&page=1">javascript</a>
+      <a href="https://johnfash.com/category/php&page=1">php</a>
+      <a href="https://johnfash.com/category/mysql&page=1">mysql</a>
+      <a href="https://johnfash.com/category/cakephp&page=1">cakephp</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+    <div class="imageContainer bg-1">
+      <h2>Mobile (app view)</h2> <br>
+      <img class="jobImg-10" src="https://johnfash.com/asset/mock/whizz.gif" alt="">
+      <img class="jobImg-10" src="https://johnfash.com/asset/home/whizz/one.png" alt="">
+      <img class="jobImg-10" src="https://johnfash.com/asset/home/whizz/two.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-10')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-10')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-10" onclick="currentSlide(1, '-10')"></span>
+        <span class="dot dot-10" onclick="currentSlide(2, '-10')"></span>
+        <span class="dot dot-10" onclick="currentSlide(3, '-10')"></span>
+      </div>
+    </div>
+
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="http://whizz.diimtech.com">Whizz</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Oct 30, 2018</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Nov 11, 2018</p>
+    <p>
+      Whizz is a logistic company in Nigeria, they are fully backed by DHL. <br> <br>
+      <u><b>Actities</b></u> <br>
+      1. <b>Wireframe</b> & <b>sketch</b> of the entire project. <br> <br>
+      2. Project comprise of customer & admin web app + hybride mobile app. <br><br>
+      3. Development, testing and deployment to digital ocean. <br><br>
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/javascript&page=1">javascript</a>
+      <a href="https://johnfash.com/category/reactjs&page=1">reactjs</a>
+      <a href="https://johnfash.com/category/capacitorjs&page=1">capacitorjs</a>
+      <a href="https://johnfash.com/category/nodejs&page=1">nodejs</a>
+      <a href="https://johnfash.com/category/graphql&page=1">graphql</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+    <div class="imageContainer bg-1">
+      <h2>Mobile (app view)</h2> <br>
+      <img class="jobImg-11" src="https://johnfash.com/asset/mock/betascratch.gif" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile1.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile2.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile3.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile5.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile6.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile7.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile8.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile9.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile10.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile11.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile12.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile13.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile14.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile15.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile16.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile17.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile18.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile19.png" alt="">
+      <img class="jobImg-11" src="https://johnfash.com/asset/home/betascratch/mobile-index.png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-11')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-11')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-11" onclick="currentSlide(1, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(2, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(3, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(4, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(5, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(6, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(7, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(8, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(9, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(10, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(11, '-11')"></span>
+        <span class="dot dot-11" onclick="currentSlide(12, '-11')"></span>
+      </div>
+    </div>
+
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://betascratch.com">Betascratch</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Oct 30, 2018</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Nov 11, 2018</p>
+    <p>
+      Betasctach is a gaming platform owned by the company - Hightable Africa. <br> <br>
+      <u><b>Actities</b></u> <br>
+      2. Convertion of wireframes into actual code <b>(<b>react</b>, <b>nextjs</b>, <b>graphql</b>)</b>. <br><br>
+      3. Added <b>animation</b> using animation <b>libraries</b>. <br> <br>
+      4. Added minor games i.e <b>Drive</b>, <b>Drive</b>, <b>Ludo</b>, <b>Draft</b> etc. <br> <br>
+      6. Test , deploy(digital ocean) and future updates. <br><br>
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/xml&page=1">xml</a>
+      <a href="https://johnfash.com/category/java&page=1">java</a>
+      <a href="https://johnfash.com/category/libraries&page=1">libraries</a>
+      <a href="https://johnfash.com/category/json&page=1">json</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+      
+    <div class="imageContainer bg-1">
+      <h2>Desktop (web view)</h2> <br>
+      <img class="jobImg-12" src="https://johnfash.com/asset/home/heroku/mobile.gif" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-12')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-12')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-12" onclick="currentSlide(1, '-12')"></span>
+      </div>
+    </div>
+    
+    <div class="imageContainer bg-1">
+      <h2>Mobile (web view)</h2> <br>
+      <img class="jobImg-13" src="https://johnfash.com/asset/home/heroku/mobile(2).gif" alt="">
+      <img class="jobImg-13" src="https://johnfash.com/asset/home/heroku/mobile(7).png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-13')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-13')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-13" onclick="currentSlide(1, '-13')"></span>
+        <span class="dot dot-13" onclick="currentSlide(2, '-13')"></span>
+      </div>
+    </div>
+    
+    
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://breet-test.herokuapp.com">Breet</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Aug 3, 2022</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Aug 3, 2022</p>
+    <p>
+      Breet is just a test app i did all fully using typescript, react and css only for the styling. <br> <br>
+      <u><b>Actities</b></u> <br>
+      2. Convertion of figma design into actual code <b>(<b>react</b>, <b>css</b>)</b>. <br><br>
+      3. Added <b>animation</b> using css. <br> <br>
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/xml&page=1">css</a>
+      <a href="https://johnfash.com/category/java&page=1">react</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+
+
+<div class="jobs jobOff">
+  <div class="close">
+    <span role="image" aria-label="close" onclick="displayJob('portfolio', 0, true)"> &#10060; </span>
+  </div>
+  <div class="jobSlide">
+      
+    <div class="imageContainer bg-1">
+      <h2>Desktop (web view)</h2> <br>
+      <img class="jobImg-14" src="https://johnfash.com/asset/home/heroku/mobile.gif" alt="">
+      <img class="jobImg-14" src="https://johnfash.com/asset/home/heroku/mobile(2).png" alt="">
+      <img class="jobImg-14" src="https://johnfash.com/asset/home/heroku/mobile(4).png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-14')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-14')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-14" onclick="currentSlide(1, '-14')"></span>
+        <span class="dot dot-14" onclick="currentSlide(2, '-14')"></span>
+        <span class="dot dot-14" onclick="currentSlide(3, '-14')"></span>
+      </div>
+    </div>
+    
+    <div class="imageContainer bg-1">
+      <h2>Mobile (web view)</h2> <br>
+      <img class="jobImg-15" src="https://johnfash.com/asset/home/heroku/mobile(1).gif" alt="">
+      <img class="jobImg-15" src="https://johnfash.com/asset/home/heroku/mobile.png" alt="">
+      <img class="jobImg-15" src="https://johnfash.com/asset/home/heroku/mobile(5).png" alt="">
+      <a class="prev" onclick="plusSlides(-1, '-15')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, '-15')">&#10095;</a>
+      <div class="dots">
+        <span class="dot dot-15" onclick="currentSlide(1, '-15')"></span>
+        <span class="dot dot-15" onclick="currentSlide(2, '-15')"></span>
+        <span class="dot dot-15" onclick="currentSlide(3, '-15')"></span>
+      </div>
+    </div>
+    
+    
+  </div>
+  <div class="slide-desc">
+    <h3>Description</h3>
+    <p> <span role="image" aria-label="globe">&#127757;</span> <a target="_blank" href="https://baros-logistics.herokuapp.com/">Baros</a> </p>
+    <p> <span role="image" aria-label="date from">&#128197;</span> Aug 3, 2022</p>
+    <p> <span role="image" class="to" aria-label="to">&#10597;</span></p>
+    <p> <span role="image" aria-label="date to">&#128197;</span> Aug -, 2022</p>
+    <p>
+      Baros Logistic is the ongoing project for Baros Logistics Company. <br> <br>
+      <u><b>Actities</b></u> <br>
+      2. Convertion of figma design into actual code <b>(<b>react</b>, <b>css</b>)</b>. <br><br>
+      3. Added <b>animation</b> using css. <br> <br>
+    </p>
+    <h3>Technology</h3>
+    <p>
+      <a href="https://johnfash.com/category/xml&page=1">css</a>
+      <a href="https://johnfash.com/category/java&page=1">react</a>
+    </p>
+    <h3>Share</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/facebook-portfolio.png" alt="">
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/linkedin-portfolio.png" alt="">
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://johnfash.com/about/portfolio.php">
+      <img src="https://johnfash.com/asset/twitter-portfolio.png" alt="">
+    </a>
+  </div>
+</div>
+
+
+
+</div>
+</section>
+
+<script type="text/javascript">
+  var slideIndex = 1;
+  for (var i = 1; i < document.getElementsByClassName('imageContainer').length + 1; i++) {
+    showSlides(slideIndex, '-' + i);
+  }
+  displayJob('portfolio', 0);
+
+  function plusSlides(n, idx) {
+    showSlides(slideIndex += n, idx);
+  }
+
+  function currentSlide(n, idx) {
+    showSlides(slideIndex = n, idx);
+  }
+
+  function showSlides(n, idx) {
+    var i;
+    var slides = document.getElementsByClassName("jobImg" + idx);
+    var dots = document.getElementsByClassName("dot" + idx);
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+
+  function displayJob(view, index, close = false) {
+    if (!close) {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    var portF = document.getElementsByClassName("portfolio");
+    var job = document.getElementsByClassName("jobs");
+    for (var i = 0; i < job.length; i++) {
+      if (!job[i].classList.contains("jobOff")) {
+        job[i].className += " jobOff";
+      }
+    }
+    if (view == 'portfolio') {
+      if (portF[0].classList.contains("portfolioOff")) {
+        portF[0].className = portF[0].className.replace(" portfolioOff", "");
+      }
+    } else {
+      portF[0].className += " portfolioOff";
+      job[index].className = job[index].className.replace(" jobOff", "");
+    }
+  }
+
+  function openProj() {
+    const url = window.location.href.split('/').pop();
+    if (url.indexOf('#') === 0) {
+      const id = url.split('#').pop();
+      if (!isNaN(id)) {
+        displayJob('jobDisp', Number(id))
+      }
+    }
+  }
+  openProj();
+</script>
+</body>
+
+</html>

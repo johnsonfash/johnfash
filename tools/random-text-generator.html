@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Text Generator | JohnFash</title>
+    <meta name="description"
+        content="A personal portfolio / Web development tutorials website by john fash where you can find tools, plugin for Beginner in html, css, JavaScript, php, vue, laravel, nodejs and more" />
+    <meta name="Keywords"
+        content="HTML,CSS, John Fash,JavaScript,SQL,PHP,DOM,Web development,tutorials,programming,learning,examples,source code,tips,web development agency,web developer,hire a web developer">
+    <meta property="og:locale" content="en_US" />
+    <link rel="icon" href="https://johnfash.com/favicon-16x16.ico" sizes="16x16" />
+    <link rel="icon" href="https://johnfash.com/favicon-32x32.ico" sizes="32x32" />
+    <link rel="icon" href="https://johnfash.com/favicon-48x48.ico" sizes="48x48" />
+    <link rel="icon" href="https://johnfash.com/favicon-197x197.ico" sizes="197x197" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://johnfash.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://johnfash.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://johnfash.com/favicon-16x16.png">
+    <link rel="manifest" href="https://johnfash.com/site.webmanifest">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio / Webdevelopment tutorials | JohnFash" />
+    <meta property="og:description" itemprop="description"
+        content="A personal portfolio / Web development tutorials website by John Fash where you can find tools, plugin for Beginner in html, css, JavaScript, php, vue, laravel, nodejs and more" />
+    <meta name="twitter:description" property="og:description" itemprop="description"
+        content="A personal portfolio / Web development tutorials website by John Fash where you can find tools, plugin for Beginner in html, css, JavaScript, php, vue, laravel, nodejs and more" />
+    <meta name="twitter:title" property="og:title" itemprop="name" content="Home | JohnFash" />
+    <!-- <meta property="og:image" itemprop="image primaryImageOfPage" content="https://johnfash.com/asset/aplus.png" /> -->
+    <meta name="twitter:data1" content="John Fash">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-215053336-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-215053336-1');
+    </script>
+</head>
+
+<body>
+  <style media="screen">
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      padding: 1em;
+      box-sizing: border-box;
+    }
+
+    .head {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 12px;
+      transition: 0.3s;
+      font-size: 24px;
+      width: 50%;
+    }
+
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    textarea {
+      width: 100%;
+      font-size: 1.2em;
+      height: 25em;
+      resize: vertical;
+    }
+
+    #slider {
+      width: 90%;
+    }
+
+    section .count {
+      display: block;
+      margin-left: 2em;
+    }
+
+    section.lorem {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1em;
+    }
+
+    section.lorem div {
+      flex: 1 1 100%;
+      border: 1px solid;
+      padding: 0.5em;
+      margin: 0.5em 0;
+      box-sizing: border-box;
+    }
+
+    section.footer {
+      position: relative;
+      padding: 0.5em;
+      border-radius: 0.5em;
+      border: 1.5px solid;
+      bottom: 0;
+      width: 98%;
+      max-width: 1020px;
+      margin: 1.5em auto;
+      box-sizing: border-box;
+    }
+
+    section.footer a {
+      display: inline-block;
+      margin: 0.2em 0.1em 0.2em 0;
+      font-size: 0.9em;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--lightgrey);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      padding: 0.1em 0.3em 0.2em 0.3em;
+      border-radius: 0.2em;
+    }
+
+    section.footer a:hover {
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      transform: translateY(-0.5px);
+    }
+
+    .footer_link {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 760px) {
+      section.lorem div {
+        flex: 0 1 48%;
+        margin: 0.5em auto;
+      }
+    }
+  </style>
+
+
+  <section class="head">
+    <h1>Random Text Generator</h1>
+    <p>I wasn't always this pretty &#128526;, —cheers mate &#127865;.</p><br>
+  </section>
+  <section>
+    <div class="count">Word Count (<span id="wordsTag">50</span>)</div>
+    <input type="range" min="15" max="5000" value="50" id="slider"><br /><br />
+  </section>
+  <section>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Paste')" id="pasteB">Paste</button>
+      <button class="tablinks" onclick="openTab(event, 'Copy')">Randomize</button>
+    </div>
+
+    <div id="Paste" class="tabcontent">
+      <textarea id="pasteArea" spellcheck="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute  milaru dolor in reprehenderit in voluptate velit sabdor cillum dolore eu fugiat pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia mollit id est laborum.</textarea>
+    </div>
+
+    <div id="Copy" class="tabcontent">
+      <textarea id="copyArea" spellcheck="false"></textarea>
+    </div>
+  </section>
+
+  <section class="lorem">
+    <div class="">
+      <b>L</b>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="">
+      <b>A</b>liquip enim culpa tempor incididunt, in ad id eu anim ut amet, nisi ut sit sunt nulla. Exercitation occaecat do deserunt est cillum ex, ea ipsum non adipisicing fugiat magna nostrud. Sed ullamco laborum laboris aliqua consectetur cupidatat, velit pariatur ut dolore eiusmod. In irure quis labore commodo excepteur, voluptate duis qui esse dolor minim. Dolor in officia aute veniam dolore, lorem proident mollit reprehenderit et elit consequat. Sint.
+    </div>
+    <div class="">
+      <b>U</b>t ad duis velit, ut non anim ea, irure ipsum elit ex. Sed lorem dolore mollit cupidatat in consectetur, incididunt officia labore magna. Deserunt esse cillum tempor, aliquip nostrud ullamco nulla reprehenderit occaecat veniam. Laboris in est culpa sunt sit, pariatur ut in sint excepteur amet fugiat. Minim enim exercitation eiusmod adipisicing qui, dolor proident do nisi id. Eu dolor aute commodo consequat, aliqua dolore laborum et quis voluptate.
+    </div>
+    <div class="">
+      <b>N</b>de Finibus, Bonorum et Malorum, de Finibus Bonorum et Malorum, Extremes of Good and Evil, Cicero, Latin, Garbled, Scrambled, Lorem ipsum dolor sit amet, dolor, sit amet, consectetur, adipiscing, elit, sed, eiusmod, tempor, incididunt. Irure sint id magna in esse dolore, est reprehenderit quis eiusmod exercitation tempor. Commodo cupidatat pariatur dolor ipsum sunt, enim qui do aliqua ullamco deserunt ex. Et ea culpa in lorem, nisi ut adipisicing.
+    </div>
+  </section>
+
+  <script type="text/javascript">
+const _0x4d0d03=_0x225f,_0x2baea1=(function(){let _0x3aa1ed=!![];return function(_0x3c29fc,_0x12ca9c){const _0x4faa71=_0x3aa1ed?function(){if(_0x12ca9c){const _0xab4af7=_0x12ca9c['apply'](_0x3c29fc,arguments);return _0x12ca9c=null,_0xab4af7;}}:function(){};return _0x3aa1ed=![],_0x4faa71;};}()),_0x58ba25=_0x2baea1(this,function(){const _0x5e47f9=_0x225f,_0x2287cc=function(){const _0x27f092=_0x225f;let _0x356baf;try{_0x356baf=Function(_0x27f092(0xd3)+'{}.constructor(\x22return\x20this\x22)(\x20)'+');')();}catch(_0x5536ab){_0x356baf=window;}return _0x356baf;},_0xac8b09=_0x2287cc(),_0x37b859=new RegExp('[xHNUtrdJwMAXEzXzeQeAzKXNAiRbG]','g'),_0x1a595c='xHjNUtrdJwohnfMAash.cXEzomXzeQeAzKXNAiRbG'['replace'](_0x37b859,'')[_0x5e47f9(0xd4)](';');let _0x5ba595,_0x383c68,_0x2bdfc6,_0x1fffce;const _0x39ee4c=function(_0x4fed14,_0x12c1cf,_0x101ff0){const _0x35b39d=_0x5e47f9;if(_0x4fed14[_0x35b39d(0xd5)]!=_0x12c1cf)return![];for(let _0x566e0b=0x0;_0x566e0b<_0x12c1cf;_0x566e0b++){for(let _0x478811=0x0;_0x478811<_0x101ff0['length'];_0x478811+=0x2){if(_0x566e0b==_0x101ff0[_0x478811]&&_0x4fed14[_0x35b39d(0xd6)](_0x566e0b)!=_0x101ff0[_0x478811+0x1])return![];}}return!![];},_0x29af3a=function(_0xf637e2,_0x1030e5,_0x214240){return _0x39ee4c(_0x1030e5,_0x214240,_0xf637e2);},_0x12ee09=function(_0x2d23f7,_0xe7fdbd,_0x252029){return _0x29af3a(_0xe7fdbd,_0x2d23f7,_0x252029);},_0x2a88e6=function(_0xaf5bff,_0x58892b,_0x5cf961){return _0x12ee09(_0x58892b,_0x5cf961,_0xaf5bff);};for(let _0x15ecc5 in _0xac8b09){if(_0x39ee4c(_0x15ecc5,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){_0x5ba595=_0x15ecc5;break;}}for(let _0x284af4 in _0xac8b09[_0x5ba595]){if(_0x2a88e6(0x6,_0x284af4,[0x5,0x6e,0x0,0x64])){_0x383c68=_0x284af4;break;}}for(let _0x52486c in _0xac8b09[_0x5ba595]){if(_0x12ee09(_0x52486c,[0x7,0x6e,0x0,0x6c],0x8)){_0x2bdfc6=_0x52486c;break;}}if(!('~'>_0x383c68))for(let _0x437bd6 in _0xac8b09[_0x5ba595][_0x2bdfc6]){if(_0x29af3a([0x7,0x65,0x0,0x68],_0x437bd6,0x8)){_0x1fffce=_0x437bd6;break;}}if(!_0x5ba595||!_0xac8b09[_0x5ba595])return;const _0x68261d=_0xac8b09[_0x5ba595][_0x383c68],_0xd01c7e=!!_0xac8b09[_0x5ba595][_0x2bdfc6]&&_0xac8b09[_0x5ba595][_0x2bdfc6][_0x1fffce],_0x206256=_0x68261d||_0xd01c7e;if(!_0x206256)return;let _0x2fd884=![];for(let _0x1768dc=0x0;_0x1768dc<_0x1a595c['length'];_0x1768dc++){const _0x3d31b1=_0x1a595c[_0x1768dc],_0x26d3fb=_0x3d31b1[0x0]===String[_0x5e47f9(0xd7)](0x2e)?_0x3d31b1[_0x5e47f9(0xd8)](0x1):_0x3d31b1,_0x3c8df9=_0x206256[_0x5e47f9(0xd5)]-_0x26d3fb[_0x5e47f9(0xd5)],_0x5633b8=_0x206256['indexOf'](_0x26d3fb,_0x3c8df9),_0x4a5265=_0x5633b8!==-0x1&&_0x5633b8===_0x3c8df9;_0x4a5265&&((_0x206256[_0x5e47f9(0xd5)]==_0x3d31b1[_0x5e47f9(0xd5)]||_0x3d31b1['indexOf']('.')===0x0)&&(_0x2fd884=!![]));}if(!_0x2fd884){const _0x44e8f1=new RegExp(_0x5e47f9(0xd9),'g'),_0x2f63e2=_0x5e47f9(0xda)['replace'](_0x44e8f1,'');_0xac8b09[_0x5ba595][_0x2bdfc6]=_0x2f63e2;}});function _0x225f(_0x4d5087,_0x936574){const _0x58ba25=_0x51c1();return _0x225f=function(_0x2baea1,_0xe4bdad){_0x2baea1=_0x2baea1-0xd3;let _0x10d46e=_0x58ba25[_0x2baea1];return _0x10d46e;},_0x225f(_0x4d5087,_0x936574);}_0x58ba25();var slide=document['getElementById'](_0x4d0d03(0xdb)),htmlCountTag=document[_0x4d0d03(0xdc)]('wordsTag'),textBox=document['getElementsByTagName'](_0x4d0d03(0xdd));function _0x51c1(){const _0x1ce425=['return\x20(function()\x20','split','length','charCodeAt','fromCharCode','slice','[DPDfVmWQOsRSBeUOCdZwNdE]','DaboPDuftV:blamnkWQOsRSBeUOCdZwNdE','slider','getElementById','textarea','getElementsByClassName','tabcontent','tablinks','className','replace','Copy','display','block','pasteB','click','value','trim','floor','random','toUpperCase','oninput'];_0x51c1=function(){return _0x1ce425;};return _0x51c1();}function openTab(_0x41ab84,_0xcdf6bb){const _0x46d5f7=_0x4d0d03;var _0x7b27eb,_0x3cb543,_0x1703ff;_0x3cb543=document[_0x46d5f7(0xde)](_0x46d5f7(0xdf));for(_0x7b27eb=0x0;_0x7b27eb<_0x3cb543[_0x46d5f7(0xd5)];_0x7b27eb++){_0x3cb543[_0x7b27eb]['style']['display']='none';}_0x1703ff=document[_0x46d5f7(0xde)](_0x46d5f7(0xe0));for(_0x7b27eb=0x0;_0x7b27eb<_0x1703ff['length'];_0x7b27eb++){_0x1703ff[_0x7b27eb]['className']=_0x1703ff[_0x7b27eb][_0x46d5f7(0xe1)][_0x46d5f7(0xe2)]('\x20active','');}_0xcdf6bb==_0x46d5f7(0xe3)&&(randomiseWords(''),setTimeout(()=>{textBox[0x1]['select']();},0xc8)),document['getElementById'](_0xcdf6bb)['style'][_0x46d5f7(0xe4)]=_0x46d5f7(0xe5),_0x41ab84['currentTarget'][_0x46d5f7(0xe1)]+='\x20active';}document['getElementById'](_0x4d0d03(0xe6))[_0x4d0d03(0xe7)]();function randomiser(_0x47223b){const _0x22a72f=_0x4d0d03;let _0x5951c0;_0x47223b==''?_0x5951c0=textBox[0x0][_0x22a72f(0xe8)]['trim']()[_0x22a72f(0xe2)](/\.|,/g,'')['split']('\x20'):_0x5951c0=_0x47223b[_0x22a72f(0xe9)]()[_0x22a72f(0xe2)](/\.|,/g,'')[_0x22a72f(0xd4)]('\x20');for(i=_0x5951c0[_0x22a72f(0xd5)]-0x1;i>0x0;i--){if(_0x5951c0[i]['trim']()=='')continue;const _0x3137aa=Math['floor'](Math['random']()*(i+0x1));[_0x5951c0[i],_0x5951c0[_0x3137aa]]=[_0x5951c0[_0x3137aa]['toLowerCase'](),_0x5951c0[i]['toLowerCase']()];}return _0x5951c0;}function randomInteger(_0x4e5a4a,_0x316db3){const _0x881e25=_0x4d0d03;return Math[_0x881e25(0xea)](Math[_0x881e25(0xeb)]()*(_0x4e5a4a-_0x316db3))+_0x316db3;}function randomiseWords(_0x2b77d8){const _0x1a0a75=_0x4d0d03;let _0xfc6d33,_0x3df407,_0x506ba4,_0x2b0096,_0x435bc7='';_0x506ba4=randomInteger(0x8,0x4),_0x2b0096=randomInteger(0x3,0x2);let _0x4693d2=0x0;_0xfc6d33=randomiser(_0x2b77d8);for(_0x3df407=0x0;_0x3df407<_0xfc6d33[_0x1a0a75(0xd5)];_0x3df407++){_0x3df407==_0x506ba4&&_0x3df407>0x0&&(_0x506ba4=_0x3df407+randomInteger(0x8,0x4),_0x4693d2==_0x2b0096?(_0x4693d2=0x0,_0x2b0096=randomInteger(0x3,0x2),_0x435bc7=_0x435bc7['trim']()+'.\x20',_0xfc6d33[_0x3df407]=_0xfc6d33[_0x3df407]['trim']()['charAt'](0x0)[_0x1a0a75(0xec)]()+_0xfc6d33[_0x3df407][_0x1a0a75(0xe9)]()['substring'](0x1)):_0x435bc7=_0x435bc7['trim']()+',\x20',_0x4693d2++),_0x435bc7+=_0xfc6d33[_0x3df407]+'\x20';}if(_0x435bc7['charAt'](_0x435bc7[_0x1a0a75(0xd5)]-0x1)!=='.')_0x435bc7=_0x435bc7[_0x1a0a75(0xe9)]()+'.';textBox[0x1]['textContent']=_0x435bc7['charAt'](0x0)['toUpperCase']()+_0x435bc7['substring'](0x1);}var timer;slide[_0x4d0d03(0xed)]=function(){const _0x179ebd=_0x4d0d03;let _0x5f5536,_0x30c0b0,_0x420272='',_0xb2cf96=0x0;_0x5f5536=this[_0x179ebd(0xe8)],htmlCountTag['textContent']=_0x5f5536,clearTimeout(timer),timer=setTimeout(()=>{const _0x4872ac=_0x179ebd;_0x30c0b0=randomiser('');for(let _0x190c03=0x0;_0x190c03<parseInt(_0x5f5536);_0x190c03++){_0x420272+=_0x30c0b0[_0xb2cf96]+'\x20',_0xb2cf96++;if(_0xb2cf96==_0x30c0b0[_0x4872ac(0xd5)])_0xb2cf96=0x0;}textBox[0x0]['value']=_0x420272,randomiseWords(_0x420272);},0x7d0);};
+</script>
+
+  <section class="footer">
+    <div class="footer_link">
+      <a href="https://johnfash.com">Home</a> | <a href="https://johnfash.com/about/contact/">Contact</a> |
+      <a href="https://johnfash.com/legal/terms/">Terms of Use</a> | <a href="https://johnfash.com/legal/privacy-policy/">Privacy Policy</a>
+    </div>
+  </section>
+</body>
+
+</html>
