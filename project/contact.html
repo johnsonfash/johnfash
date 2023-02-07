@@ -168,6 +168,15 @@
               placeholder="Enter your email address"
               required
             />
+            <p>Phone</p>
+            <input
+              type="phone"
+              name="phone"
+              value=""
+              minlength="9"
+              placeholder="Enter your phone number"
+              required
+            />
             <p>Needed Service</p>
             <select class="" name="service" require>
               <option value="" selected hidden>Choose Service</option>
@@ -189,6 +198,10 @@
             <button type="submit" class="submit" name="submit">
               Submit <span id="spinner" class=""></span>
             </button>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LdorF8kAAAAAPg2LJpxBoYHRob0sH1dp5ukuaY_"
+            ></div>
           </form>
         </div>
       </div>
@@ -206,46 +219,49 @@
       </section>
     </main>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeSLoUiAAAAAAOSi9QLpprHbyLQTtkrrhGVO0o4"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       function handleSubmit(e) {
         e.preventDefault();
         const resElem = document.getElementById("response");
         const spinner = document.getElementById("spinner");
-        grecaptcha.ready(function () {
-          grecaptcha
-            .execute("6LeSLoUiAAAAAAOSi9QLpprHbyLQTtkrrhGVO0o4", {
-              action: "contact_form_submit",
-            })
-            .then(function (token) {
-              const form = new FormData();
-              form.append("email", e.target.email.value);
-              form.append("name", e.target.name.value);
-              form.append("service", e.target.service.value);
-              form.append("budget", "flexible");
-              form.append("message", e.target.message.value);
-              form.append("token", token);
-              form.append("contact_form_submit", "submit");
-              form.append("message", e.target.message.value);
-              spinner.classList.toggle("loader");
-              fetch("../utils/control.php", {
-                method: "post",
-                body: form,
-              })
-                .then((res) => res.json())
-                .then((data) => {
-                  if (data.error) {
-                    resElem.textContent = data.errorMessage;
-                  } else {
-                    resElem.textContent = "Sent ✅";
-                  }
-                  spinner.classList.toggle("loader");
-                })
-                .catch((err) => {
-                  resElem.textContent = err.message;
-                  spinner.classList.toggle("loader");
-                });
-            });
-        });
+        if (!window?.grecaptcha) {
+          return;
+        }
+        const capcha = window?.grecaptcha?.getResponse();
+        if (!capcha.trim()) {
+          resElem.textContent = "Please check the box below!";
+          return;
+        }
+        const data = {
+          name: e.target.name.value,
+          email: e.target.email.value,
+          service: e.target.phone.service,
+          message: e.target.join.message,
+          phone: e.target.join.phone,
+          capcha,
+        };
+        spinner.classList.toggle("loader");
+        fetch("https://johnfash-email.vercel.app/api", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.status) {
+              resElem.textContent = "Sent ✅";
+            } else {
+              resElem.textContent = data.message;
+            }
+            spinner.classList.toggle("loader");
+          })
+          .catch((err) => {
+            resElem.textContent = err.message;
+            spinner.classList.toggle("loader");
+          });
       }
     </script>
   </body>
