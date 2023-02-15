@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     	<sitemap>
-    		<loc>https://johnfash.com/sitemap-home.xml</loc>
+    		<loc>https://jfdigitalstudio.com/sitemap-home.xml</loc>
     		<lastmod>2022-03-31</lastmod>
     	</sitemap>
     	<sitemap>
-    		<loc>https://johnfash.com/sitemap-tools.xml</loc>
+    		<loc>https://jfdigitalstudio.com/sitemap-tools.xml</loc>
     		<lastmod>2022-03-31</lastmod>
     	</sitemap>
 			   	<sitemap>
-    		<loc>https://johnfash.com/sitemap-project.xml</loc>
+    		<loc>https://jfdigitalstudio.com/sitemap-project.xml</loc>
     		<lastmod>2022-03-31</lastmod>
     	</sitemap>
     </sitemapindex>
